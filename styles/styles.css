@@ -1,5 +1,6 @@
 /* font family inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
@@ -20,9 +21,54 @@ h6 {
   font-family: 'Inter', sans-serif;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* entete génerique */
+.titre {
+  display: inline-block;
+  position: relative;
+  margin: 5% 0;
+}
+
+.titre h2 {
+  font-size: 40px;
+  margin: 0px;
+  text-transform: uppercase;
+  position: relative;
+  width: auto;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.titre h2::after {
+  content: '';
+  position: absolute;
+  background-color: #202020;
+  width: 100%;
+  height: 2px;
+  top: 100%;
+  left: 0;
+}
+
+.titre p {
+  text-align: right;
+  width: auto;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  margin: 0px;
+  padding-left: 10px;
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  color: #f6483b;
+  font-weight: 500;
+}
+
 h1 {
   font-weight: 900;
-  font-size: 8vw;
+  font-size: 10vw;
   margin: 0;
   padding: 0;
 }
@@ -62,6 +108,12 @@ header {
   display: none;
 }
 
+.flex-centre {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 /* style section home */
 section#home {
   width: 100vw;
@@ -71,22 +123,17 @@ section#home {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none; /*for debug*/
-}
-
-.home-left img {
-  width: 600px;
-  height: 100vh;
-  margin: 0;
+  /* display: none; for debug */
 }
 
 .home-right {
-  margin-left: 15%;
+  margin-left: 30%;
   width: 400px;
   height: 50vh;
 }
 
 /* style section about me */
+
 .entete {
   display: flex;
   justify-content: center;
@@ -99,46 +146,20 @@ section#home {
 
 .entete .right {
   width: 50vh;
-  margin: 10% 5% 5% 5%;
+  margin: 10% 5% 5% 10%;
   position: relative;
 }
 
-.titre {
-  display: inline-block;
-  position: relative;
-  margin: 5% 0;
+/* style education  */
+.education {
+  flex-direction: column;
 }
 
-.entete .right h2 {
-  font-size: 40px;
-  margin: 0px;
-  text-transform: uppercase;
-  position: relative;
-  width: auto;
-  font-weight: 500;
-  padding-bottom: 15px;
+.education-titre {
+  text-align: center;
 }
 
-.entete .right h2::after {
-  content: '';
-  position: absolute;
-  background-color: #202020;
-  width: 100%;
-  height: 2px;
-  top: 100%;
-  left: 0;
-}
-
-.titre p {
-  text-align: right;
-  width: auto;
-  text-transform: uppercase;
-  background-color: #ffffff;
-  margin: 0px;
-  padding-left: 10px;
-  position: absolute;
-  right: 0;
-  bottom: -10px;
-  color: #f6483b;
-  font-weight: 500;
+/* style portfolio */
+.portfolio-titre {
+  text-align: center;
 }
