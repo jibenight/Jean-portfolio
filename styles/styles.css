@@ -68,7 +68,7 @@ p,
   position: absolute;
   right: 0;
   bottom: -10px;
-  color: #f6483b;
+  color: #00acea;
   font-weight: 500;
 }
 
@@ -77,6 +77,14 @@ h1 {
   font-size: 10vw;
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h1.tracking-in-expand {
@@ -121,11 +129,45 @@ header {
   flex-direction: column;
 }
 
+/* style bouton */
+
+button {
+  border: none;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  cursor: url(../images/tap-64.png), pointer;
+}
+
 /* style section home */
 section#home {
   width: 100vw;
   height: 100vh;
-  background: aqua url(../images/banner_bg.jpg) no-repeat center;
+  background: #00acea url(../images/banner_bg.jpg) no-repeat center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -134,7 +176,7 @@ section#home {
 
 .home-right {
   margin-left: 30%;
-  width: 400px;
+  width: 40vw;
   height: 50vh;
 }
 
@@ -174,7 +216,7 @@ section#home {
   content: '';
   position: absolute;
   width: 2px;
-  background: #f6483b;
+  background: #00acea;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -204,7 +246,7 @@ section#home {
   top: calc(50% - 8px);
   right: -8px;
   background: #ffffff;
-  border: 2px solid #f6483b;
+  border: 2px solid #00acea;
   border-radius: 16px;
   z-index: 1;
 }
@@ -220,7 +262,7 @@ section#home {
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: #f6483b;
+  background: #00acea;
   z-index: 1;
 }
 
@@ -235,7 +277,7 @@ section#home {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  color: #f6483b;
+  color: #00acea;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
@@ -257,11 +299,11 @@ section#home {
   padding: 9px 0;
   top: calc(50% - 20px);
   background: #f6d155;
-  border: 2px solid #f6483b;
+  border: 2px solid #00acea;
   border-radius: 40px;
   text-align: center;
   font-size: 18px;
-  color: #f6483b;
+  color: #00acea;
   z-index: 1;
 }
 
@@ -289,7 +331,7 @@ section#home {
   margin: 0 0 10px 0;
   font-size: 18px;
   font-weight: normal;
-  color: #f6483b;
+  color: #00acea;
 }
 
 .container .content p {
@@ -322,7 +364,7 @@ section#home {
   .container.left::before,
   .container.right::before {
     left: 100px;
-    border-color: transparent #f6483b transparent transparent;
+    border-color: transparent #00acea transparent transparent;
   }
 
   .container.left .date,
@@ -404,7 +446,7 @@ section#portfolio {
 
 .card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  cursor: url(../images/tap-32.png), pointer;
+  cursor: url(../images/tap-64.png), pointer;
 }
 
 .flip-card-front,
