@@ -177,6 +177,7 @@ section#portfolio {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 10;
 }
 
 /* style des cards projet */
@@ -187,6 +188,7 @@ section#portfolio {
   background-color: aqua;
   border-radius: 25px;
   position: relative;
+  z-index: 5;
 }
 
 .card img {
@@ -194,18 +196,29 @@ section#portfolio {
   border-radius: 25px;
 }
 
+.card:hover :nth-child(2) {
+  display: block;
+  animation: projet 1500ms ease-in;
+}
+
 .details {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
-  top: 0;
+  background: #ffffff;
+  opacity: 0.9;
+  bottom: 0px;
   left: 0;
   padding: 10px;
   height: 100%;
   display: none;
 }
 
-.card:hover :nth-child(2) {
-  display: block;
+@keyframes projet {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
 }
 
 section#aboutMe {
