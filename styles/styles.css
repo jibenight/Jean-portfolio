@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* gradiant icon hand
-background-image: linear-gradient(to top, #00acea, #00bfef, #00d0ec, #00e0e1, #00efd0); */
+background-image: linear-gradient(to top, #1DA5FE, #00bfef, #00d0ec, #00e0e1, #00efd0); */
 
 *,
 *::before,
@@ -39,7 +39,7 @@ p,
 }
 
 .titre h2 {
-  font-size: 40px;
+  font-size: 2rem;
   margin: 0px;
   text-transform: uppercase;
   position: relative;
@@ -68,13 +68,13 @@ p,
   position: absolute;
   right: 0;
   bottom: -10px;
-  color: #00acea;
+  color: #1da5fe;
   font-weight: 500;
 }
 
 h1 {
   font-weight: 900;
-  font-size: 10vw;
+  font-size: 8rem;
   margin: 0;
   padding: 0;
   background-image: linear-gradient(
@@ -144,7 +144,8 @@ button {
   );
 }
 .btn-grad {
-  margin: 10px;
+  margin: auto;
+  margin-top: 10%;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
@@ -167,7 +168,7 @@ button {
 section#home {
   width: 100vw;
   height: 100vh;
-  background: #00acea url(../images/banner_bg.jpg) no-repeat center;
+  background: #1da5fe url(../images/banner_bg.jpg) no-repeat center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -175,9 +176,12 @@ section#home {
 }
 
 .home-right {
-  margin-left: 30%;
+  margin-left: 40%;
   width: 40vw;
   height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 /* style section about me */
@@ -188,13 +192,13 @@ section#home {
 }
 
 .entete .left {
-  width: 30vh;
-  margin: 5%;
+  width: 40vw;
+  margin-top: 5%;
 }
 
 .entete .right {
-  width: 50vh;
-  margin: 10% 5% 5% 10%;
+  width: 40vw;
+  margin-top: 10%;
   position: relative;
 }
 
@@ -216,7 +220,7 @@ section#home {
   content: '';
   position: absolute;
   width: 2px;
-  background: #00acea;
+  background: #000;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -246,7 +250,7 @@ section#home {
   top: calc(50% - 8px);
   right: -8px;
   background: #ffffff;
-  border: 2px solid #00acea;
+  border: 2px solid #000;
   border-radius: 16px;
   z-index: 1;
 }
@@ -262,7 +266,7 @@ section#home {
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: #00acea;
+  background: #000;
   z-index: 1;
 }
 
@@ -273,11 +277,11 @@ section#home {
 .container .date {
   position: absolute;
   display: inline-block;
-  top: calc(50% - 8px);
+  top: calc(50% - 9px);
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
-  color: #00acea;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
@@ -298,12 +302,11 @@ section#home {
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-  background: #f6d155;
-  border: 2px solid #00acea;
+  border: 2px solid #000;
   border-radius: 40px;
   text-align: center;
-  font-size: 18px;
-  color: #00acea;
+  font-size: 1.1rem;
+  color: #000;
   z-index: 1;
 }
 
@@ -317,7 +320,14 @@ section#home {
 
 .container .content {
   padding: 30px 90px 30px 30px;
-  background: #f6d155;
+  background: rgb(31, 162, 255);
+  background: rgb(31, 162, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(31, 162, 255, 1) 0%,
+    rgba(18, 216, 250, 1) 45%,
+    rgba(31, 162, 255, 1) 100%
+  );
   position: relative;
   border-radius: 0 500px 500px 0;
 }
@@ -329,14 +339,14 @@ section#home {
 
 .container .content h2 {
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: normal;
-  color: #00acea;
+  color: white;
 }
 
 .container .content p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 22px;
   color: #000000;
 }
@@ -364,7 +374,7 @@ section#home {
   .container.left::before,
   .container.right::before {
     left: 100px;
-    border-color: transparent #00acea transparent transparent;
+    border-color: transparent #1da5fe transparent transparent;
   }
 
   .container.left .date,
@@ -426,6 +436,7 @@ section#portfolio {
   border-radius: 25px;
   perspective: 1000px;
   margin: 1%;
+  cursor: url(../images/tap-64.png), pointer;
 }
 
 .card img {
@@ -446,7 +457,6 @@ section#portfolio {
 
 .card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  cursor: url(../images/tap-64.png), pointer;
 }
 
 .flip-card-front,
@@ -476,3 +486,28 @@ section#portfolio {
 section#home {
   display: none;
 } */
+
+/* style footer  */
+footer {
+  background-color: #f5f5f5;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+footer > * {
+  margin: 4%;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li {
+  margin-right: 10px;
+}
+
+footer li a {
+  color: #1fa2ff;
+}
