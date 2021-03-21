@@ -480,6 +480,12 @@ section#portfolio {
   transform: rotateY(180deg);
 }
 
+/* style contact */
+
+.contact-titre {
+  text-align: center;
+}
+
 /* section#aboutMe {
   display: none;
 }
