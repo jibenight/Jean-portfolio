@@ -482,20 +482,31 @@ section#portfolio {
 
 /* style contact */
 
+.contact-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .contact-titre {
   text-align: center;
 }
 
-.form-right form input {
+.form-right form input,
+textarea {
   margin: 10px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
 }
 
-.contact-form {
-  display: flex;
-  justify-content: center;
+input[type='submit'] {
+  border-bottom: none !important;
 }
 
 .form-right form {
+  margin-top: 7%;
   width: 40vw;
   display: flex;
   flex-direction: column;
