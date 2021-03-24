@@ -161,7 +161,7 @@ button {
   background-position: right center;
   color: #fff;
   text-decoration: none;
-  cursor: url(../images/tap-64.png), pointer;
+  cursor: url(../images/click-64.png), pointer;
 }
 
 /* style section home */
@@ -436,7 +436,7 @@ section#portfolio {
   border-radius: 25px;
   perspective: 1000px;
   margin: 1%;
-  cursor: url(../images/tap-64.png), pointer;
+  cursor: url(../images/smile-64.png), pointer;
 }
 
 .card img {
@@ -517,6 +517,20 @@ textarea:focus {
   width: 40vw;
   display: flex;
   flex-direction: column;
+}
+
+.direct-contact {
+  margin-top: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.direct-contact img {
+  width: 50%;
+}
+
+.direct-contact p {
+  font-size: 1.5rem;
 }
 
 /* section#aboutMe {
