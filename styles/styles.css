@@ -501,7 +501,14 @@ textarea {
   font-size: 16px;
 }
 
-input[type='submit'] {
+.form-right form input:focus,
+textarea:focus {
+  border-bottom: 2px solid #1da5fe;
+  font-size: 1.5rem;
+  transition: 500ms;
+}
+
+.form-right form input[type='submit'] {
   border-bottom: none !important;
 }
 
