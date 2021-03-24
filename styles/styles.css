@@ -2,6 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* @font-face {
+  font-family: 'Leonardo Rounded bold';
+  font-family: 'Leonardo Rounded light';
+  src: local('Leonardo Rounded bold'),
+    url('../fonts/LeoRounded-Bold.ttf') format('ttf');
+  src: local('Leonardo Rounded light'),
+    url('../fonts/LeoRounded-Light.ttf') format('ttf');
+} */
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../fonts/Comfortaa-VariableFont_wght.ttf') format('ttf');
+}
+
 /* gradiant icon hand
 background-image: linear-gradient(to top, #1DA5FE, #00bfef, #00d0ec, #00e0e1, #00efd0); */
 
@@ -23,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Comfortaa';
 }
 
 p,
@@ -73,7 +87,7 @@ p,
 }
 
 h1 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 8rem;
   margin: 0;
   padding: 0;
@@ -178,7 +192,7 @@ section#home {
 .home-right {
   margin-left: 40%;
   width: 40vw;
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   justify-content: center;
   align-content: center;
