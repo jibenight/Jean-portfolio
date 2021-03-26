@@ -31,6 +31,17 @@ p,
   font-family: 'Roboto', sans-serif;
 }
 
+section#aboutMe {
+  max-width: 1200px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* entete génerique */
 .titre {
   display: inline-block;
@@ -118,8 +129,21 @@ h1.tracking-in-expand {
   }
 }
 
+/* style du header */
+
 header {
+  position: fixed;
+  top: 0;
+}
+
+header nav ul {
   display: none;
+}
+
+header nav img {
+  position: fixed;
+  top: 30px;
+  right: 30px;
 }
 
 .flex-centre {
