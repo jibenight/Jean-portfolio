@@ -136,14 +136,29 @@ header {
   top: 0;
 }
 
-header nav ul {
+header nav ul li:nth-child(1) {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
+}
+
+header .left,
+img {
   display: none;
 }
 
-header nav img {
-  position: fixed;
-  top: 30px;
-  right: 30px;
+@media screen and (max-width: 780px) {
+  header .left,
+  img {
+    display: block;
+  }
+
+  header nav img {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+  }
 }
 
 .flex-centre {
