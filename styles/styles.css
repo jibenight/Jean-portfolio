@@ -11,19 +11,12 @@ background-image: linear-gradient(to top, #1DA5FE, #00bfef, #00d0ec, #00e0e1, #0
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-family: 'Comfortaa';
+}
+
+body,
+p {
+  margin: 0;
 }
 
 p,
@@ -129,90 +122,10 @@ h1.tracking-in-expand {
   }
 }
 
-/* style du header */
-
-header {
-  position: fixed;
-  top: 0;
-}
-
-header nav {
-}
-
-header nav a {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: #000;
-  font-weight: bold;
-}
-
-header nav a:nth-child(1) {
-  position: fixed;
-  top: 3%;
-  left: 0;
-  transform: translateY(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-
-header nav a:nth-child(2) {
-  position: fixed;
-  top: 0;
-  left: 3%;
-  transform: translateX(-50%, -50%);
-  text-orientation: upright;
-  writing-mode: vertical-lr;
-  height: 100%;
-  text-align: center;
-}
-
-header nav a:nth-child(3) {
-  position: fixed;
-  top: 0;
-  right: 3%;
-  transform: translateX(-50%, -50%);
-  text-orientation: upright;
-  writing-mode: vertical-lr;
-  height: 100%;
-  text-align: center;
-}
-
-header nav a:nth-child(4) {
-  position: fixed;
-  bottom: 3%;
-  left: 0;
-  transform: translateY(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-
-header .left,
-header nav img {
-  display: none;
-  width: 64px;
-  position: fixed;
-  top: 4%;
-  right: 4%;
-}
-
-@media screen and (max-width: 780px) {
-  header .left,
-  img {
-    display: block;
-  }
-
-  header nav img {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-  }
-}
-
 .flex-centre {
   display: flex;
   justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  align-items: center;
 }
 
 /* style bouton */

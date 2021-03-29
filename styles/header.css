@@ -1,0 +1,81 @@
+/* style du header */
+
+header {
+  position: fixed;
+  top: 0;
+}
+
+header nav p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #000;
+  font-weight: bold;
+}
+
+nav p {
+  cursor: pointer;
+}
+
+nav img {
+  display: none;
+}
+
+nav p:hover + img {
+  display: inline-block;
+}
+
+nav p:hover img:first-of-type {
+  display: inline-block;
+}
+
+#nav-about {
+  position: fixed;
+  top: 3%;
+  left: 0;
+  transform: translateY(-50%, -50%);
+  width: 100%;
+  flex-direction: column;
+}
+
+#nav-about img {
+  transform: rotate(90deg);
+}
+
+#nav-portfolio {
+  position: fixed;
+  top: 0;
+  left: 3%;
+  transform: translateX(-50%, -50%);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  height: 100%;
+  flex-direction: column;
+}
+
+#nav-contact {
+  position: fixed;
+  top: 0;
+  right: 3%;
+  transform: translateX(-50%, -50%);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
+#nav-contact img {
+  transform: rotate(180deg);
+}
+
+#nav-skills {
+  position: fixed;
+  bottom: 3%;
+  left: 0;
+  transform: translateY(-50%, -50%);
+  width: 100%;
+  flex-direction: column-reverse;
+}
+
+#nav-skills img {
+  transform: rotate(270deg);
+}
