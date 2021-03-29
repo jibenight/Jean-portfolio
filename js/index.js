@@ -1,5 +1,4 @@
 // nav feature
-
-document.getElementById('myBtn').addEventListener('click', function () {
-  document.getElementById('demo').innerHTML = 'Hello World';
+document.getElementById('nav-about').addEventListener('click', function () {
+  document.getElementById('home').style.display = 'none';
 });

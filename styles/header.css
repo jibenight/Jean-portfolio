@@ -9,11 +9,12 @@ header nav p {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: #000;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 nav p {
   cursor: pointer;
+  font-weight: bolder;
 }
 
 nav img {
