@@ -29,7 +29,7 @@ nav p:hover img:first-of-type {
   display: inline-block;
 }
 
-#nav-about {
+nav div:nth-child(1) {
   position: fixed;
   top: 3%;
   left: 0;
@@ -38,7 +38,7 @@ nav p:hover img:first-of-type {
   flex-direction: column;
 }
 
-#nav-about img {
+nav div:nth-child(1) img {
   transform: rotate(90deg);
 }
 
