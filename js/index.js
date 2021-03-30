@@ -13,24 +13,21 @@ cancel.addEventListener('click', function () {
 });
 
 // nav feature
-// document.getElementById('nav-about').addEventListener('click', function () {
-//   home.style.display = 'none';
-//   cancel.style.display = 'block';
-//   header.style.display = 'none';
-//   footer.style.display = 'flex';
-//   document.getElementById('aboutMe').style.display = 'block';
-// });
-
-function changeNav() {
-  const aboutMe = document.getElementById('aboutMe');
-
-  if (aboutMe.firstChild.nodeValue == 'À propos de moi') {
-    console.log('ça marche');
-  }
-  console.log('ça marche');
-}
-
 const el = document.querySelector('nav');
 el.addEventListener('click', function (e) {
-  console.log(e.target);
+  const cible = e.target;
+  home.style.display = 'none';
+  cancel.style.display = 'block';
+  header.style.display = 'none';
+  footer.style.display = 'flex';
+  if (cible.firstChild.nodeValue == 'À propos de moi') {
+    const clickNav = document.getElementById('aboutMe');
+    clickNav.style.display = 'block';
+  } else if (cible.firstChild.nodeValue == 'Portfolio') {
+    document.getElementById('portfolio').style.display = 'block';
+  } else if (cible.firstChild.nodeValue == 'Contact') {
+    document.getElementById('contact').style.display = 'block';
+  } else {
+    console.log('alert');
+  }
 });
