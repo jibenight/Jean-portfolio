@@ -29,9 +29,6 @@ section#aboutMe {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -161,6 +158,20 @@ button {
   color: #fff;
   text-decoration: none;
   cursor: url(../images/click-64.png), pointer;
+}
+
+/* style de l'icone cancel */
+
+#cancel img {
+  width: 64px;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+}
+
+#cancel {
+  display: none;
+  z-index: 99;
 }
 
 /* style section home */
