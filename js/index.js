@@ -10,6 +10,9 @@ cancel.addEventListener('click', function () {
   header.style.display = 'block';
   footer.style.display = 'none';
   document.getElementById('aboutMe').style.display = 'none';
+  document.getElementById('portfolio').style.display = 'none';
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById('skills').style.display = 'none';
 });
 
 // nav feature
@@ -21,13 +24,15 @@ el.addEventListener('click', function (e) {
   header.style.display = 'none';
   footer.style.display = 'flex';
   if (cible.firstChild.nodeValue == 'À propos de moi') {
-    clickNav = document.getElementById('aboutMe');
-    clickNav.style.display = 'block';
-  } else if (cible.firstChild.nodeValue == 'Portfolio') {
+    document.getElementById('aboutMe').style.display = 'block';
+  }
+  if (cible.firstChild.nodeValue == 'Portfolio') {
     document.getElementById('portfolio').style.display = 'block';
-  } else if (cible.firstChild.nodeValue == 'Contact') {
+  }
+  if (cible.firstChild.nodeValue == 'Contact') {
     document.getElementById('contact').style.display = 'block';
-  } else {
-    console.log('alert');
+  }
+  if (cible.firstChild.nodeValue == 'Mes compétences') {
+    document.getElementById('skills').style.display = 'block';
   }
 });
