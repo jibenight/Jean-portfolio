@@ -23,11 +23,13 @@ nav img {
 
 nav p:hover + img {
   display: inline-block;
+  cursor: pointer;
 }
 
-nav p:hover img:first-of-type {
+/* nav p:hover img:first-of-type {
   display: inline-block;
-}
+  
+} */
 
 nav div:nth-child(1) {
   position: fixed;
@@ -40,6 +42,17 @@ nav div:nth-child(1) {
 
 nav div:nth-child(1) img {
   transform: rotate(90deg);
+  animation: bas 200ms linear;
+}
+
+@keyframes bas {
+  from {
+    transform: translateY(-10px) rotate(90deg);
+  }
+
+  to {
+    transform: translateY(0px) rotate(90deg);
+  }
 }
 
 nav div:nth-child(2) {
