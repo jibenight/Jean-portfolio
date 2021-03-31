@@ -21,7 +21,7 @@ el.addEventListener('click', function (e) {
   header.style.display = 'none';
   footer.style.display = 'flex';
   if (cible.firstChild.nodeValue == 'À propos de moi') {
-    const clickNav = document.getElementById('aboutMe');
+    clickNav = document.getElementById('aboutMe');
     clickNav.style.display = 'block';
   } else if (cible.firstChild.nodeValue == 'Portfolio') {
     document.getElementById('portfolio').style.display = 'block';
