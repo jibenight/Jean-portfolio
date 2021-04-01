@@ -1,7 +1,7 @@
-let cancel = document.getElementById('cancel');
-let home = document.getElementById('home');
-let header = document.querySelector('header');
-let footer = document.querySelector('footer');
+const cancel = document.getElementById('cancel');
+const home = document.getElementById('home');
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
 
 // cancel icon
 cancel.addEventListener('click', function () {
@@ -23,16 +23,16 @@ el.addEventListener('click', function (e) {
   cancel.style.display = 'block';
   header.style.display = 'none';
   footer.style.display = 'flex';
+
   if (cible.firstChild.nodeValue == 'À propos de moi') {
     document.getElementById('aboutMe').style.display = 'block';
-  }
-  if (cible.firstChild.nodeValue == 'Portfolio') {
+  } else if (cible.firstChild.nodeValue == 'Portfolio') {
     document.getElementById('portfolio').style.display = 'block';
-  }
-  if (cible.firstChild.nodeValue == 'Contact') {
+  } else if (cible.firstChild.nodeValue == 'Contact') {
     document.getElementById('contact').style.display = 'block';
-  }
-  if (cible.firstChild.nodeValue == 'Mes compétences') {
+  } else if (cible.firstChild.nodeValue == 'Mes compétences') {
     document.getElementById('skills').style.display = 'block';
+  } else {
+    console.log('test');
   }
 });
