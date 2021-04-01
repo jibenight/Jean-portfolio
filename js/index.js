@@ -1,3 +1,4 @@
+const togglenav = document.querySelector('nav');
 const cancel = document.getElementById('cancel');
 const home = document.getElementById('home');
 const header = document.querySelector('header');
@@ -16,23 +17,31 @@ cancel.addEventListener('click', function () {
 });
 
 // nav feature
-const el = document.querySelector('nav');
-el.addEventListener('click', function (e) {
+
+togglenav.addEventListener('click', function (e) {
   const cible = e.target;
-  home.style.display = 'none';
-  cancel.style.display = 'block';
-  header.style.display = 'none';
-  footer.style.display = 'flex';
+
+  function display() {
+    home.style.display = 'none';
+    cancel.style.display = 'block';
+    header.style.display = 'none';
+    footer.style.display = 'flex';
+  }
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
     document.getElementById('aboutMe').style.display = 'block';
-  } else if (cible.firstChild.nodeValue == 'Portfolio') {
+    display();
+  }
+  if (cible.firstChild.nodeValue == 'Portfolio') {
     document.getElementById('portfolio').style.display = 'block';
-  } else if (cible.firstChild.nodeValue == 'Contact') {
+    display();
+  }
+  if (cible.firstChild.nodeValue == 'Contact') {
     document.getElementById('contact').style.display = 'block';
-  } else if (cible.firstChild.nodeValue == 'Mes compétences') {
+    display();
+  }
+  if (cible.firstChild.nodeValue == 'Mes compétences') {
     document.getElementById('skills').style.display = 'block';
-  } else {
-    console.log('test');
+    display();
   }
 });
