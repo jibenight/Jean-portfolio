@@ -42,6 +42,9 @@ nav div:nth-child(1) {
 
 nav div:nth-child(1) img {
   transform: rotate(90deg);
+}
+
+/* .animation-hautbas {
   animation: bas 200ms linear;
 }
 
@@ -53,7 +56,7 @@ nav div:nth-child(1) img {
   to {
     transform: translateY(0px) rotate(90deg);
   }
-}
+} */
 
 nav div:nth-child(2) {
   position: fixed;
