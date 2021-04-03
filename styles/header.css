@@ -1,8 +1,10 @@
 /* style du header */
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
+  z-index: 50;
 }
 
 header nav p {
@@ -44,19 +46,19 @@ nav div:nth-child(1) img {
   transform: rotate(90deg);
 }
 
-/* .animation-hautbas {
-  animation: bas 200ms linear;
+.animation-hautbas {
+  animation: section-bas 1700ms linear;
 }
 
-@keyframes bas {
-  from {
-    transform: translateY(-10px) rotate(90deg);
+@keyframes section-bas {
+  0% {
+    transform: translateY(-300vh);
   }
 
-  to {
-    transform: translateY(0px) rotate(90deg);
+  100% {
+    transform: translateY(0vh);
   }
-} */
+}
 
 nav div:nth-child(2) {
   position: fixed;
@@ -69,6 +71,33 @@ nav div:nth-child(2) {
   flex-direction: column;
 }
 
+.animation-gauche1 {
+  animation: gauche1 700ms linear;
+}
+
+@keyframes gauche1 {
+  from {
+    transform: translateX(-100vw);
+  }
+
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+.animation-gauche2 {
+  animation: gauche2 700ms linear;
+}
+
+@keyframes gauche2 {
+  from {
+    transform: translateX(0vw);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
+}
 nav div:nth-child(3) {
   position: fixed;
   top: 0;
@@ -82,6 +111,20 @@ nav div:nth-child(3) {
 
 nav div:nth-child(3) img {
   transform: rotate(180deg);
+}
+
+.animation-droitegauche {
+  animation: droite 700ms linear;
+}
+
+@keyframes droite {
+  from {
+    transform: translateX(200vw);
+  }
+
+  to {
+    transform: translateX(0vw);
+  }
 }
 
 nav div:nth-child(4) {

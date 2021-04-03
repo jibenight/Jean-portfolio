@@ -38,6 +38,7 @@ togglenav.addEventListener('click', function (e) {
   }
   if (cible.firstChild.nodeValue == 'Contact') {
     document.getElementById('contact').style.display = 'block';
+
     display();
   }
   if (cible.firstChild.nodeValue == 'Mes compétences') {

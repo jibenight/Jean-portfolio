@@ -1,19 +1,5 @@
 /* style section about me */
 
-section#aboutMe {
-  animation: section-bas 1s ease;
-}
-
-@keyframes section-bas {
-  0% {
-    transform: translateY(-300vh);
-  }
-
-  100% {
-    transform: translateY(0vh);
-  }
-}
-
 .entete {
   display: flex;
   justify-content: center;

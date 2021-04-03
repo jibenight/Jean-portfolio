@@ -175,6 +175,9 @@ button {
 
 /* style section home */
 section#home {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: #1da5fe url(../images/banner_bg.jpg) no-repeat center;
