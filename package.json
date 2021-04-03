@@ -2,7 +2,7 @@
   "name": "jean-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jibenight/jean-portfolio/issues"
   },
-  "homepage": "https://github.com/jibenight/jean-portfolio#readme"
+  "homepage": "https://github.com/jibenight/jean-portfolio#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
 }

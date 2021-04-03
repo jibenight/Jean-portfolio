@@ -1,0 +1,144 @@
+/* style du header */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+header nav p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+nav p {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+nav img {
+  display: none;
+}
+
+nav p:hover + img {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* nav p:hover img:first-of-type {
+  display: inline-block;
+  
+} */
+
+nav div:nth-child(1) {
+  position: fixed;
+  top: 3%;
+  left: 0;
+  transform: translateY(-50%, -50%);
+  width: 100%;
+  flex-direction: column;
+}
+
+nav div:nth-child(1) img {
+  transform: rotate(90deg);
+}
+
+.animation-hautbas {
+  animation: section-bas 1700ms linear;
+}
+
+@keyframes section-bas {
+  0% {
+    transform: translateY(-300vh);
+  }
+
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+nav div:nth-child(2) {
+  position: fixed;
+  top: 0;
+  left: 3%;
+  transform: translateX(-50%, -50%);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  height: 100%;
+  flex-direction: column;
+}
+
+.animation-gauche1 {
+  animation: gauche1 700ms linear;
+}
+
+@keyframes gauche1 {
+  from {
+    transform: translateX(-100vw);
+  }
+
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+.animation-gauche2 {
+  animation: gauche2 700ms linear;
+}
+
+@keyframes gauche2 {
+  from {
+    transform: translateX(0vw);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
+}
+nav div:nth-child(3) {
+  position: fixed;
+  top: 0;
+  right: 3%;
+  transform: translateX(-50%, -50%);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
+nav div:nth-child(3) img {
+  transform: rotate(180deg);
+}
+
+.animation-droitegauche {
+  animation: droite 700ms linear;
+}
+
+@keyframes droite {
+  from {
+    transform: translateX(200vw);
+  }
+
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+nav div:nth-child(4) {
+  position: fixed;
+  bottom: 3%;
+  left: 0;
+  transform: translateY(-50%, -50%);
+  width: 100%;
+  flex-direction: column-reverse;
+}
+
+nav div:nth-child(4) img {
+  transform: rotate(270deg);
+}
+
+
+/*# sourceMappingURL=/header.59cc17d7.css.map */

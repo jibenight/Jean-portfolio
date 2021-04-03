@@ -1,3 +1,5 @@
+import '../node_modules/@fortawesome/fontawesome-free/js/all';
+
 const togglenav = document.querySelector('nav');
 const cancel = document.getElementById('cancel');
 const home = document.getElementById('home');
