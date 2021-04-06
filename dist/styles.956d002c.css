@@ -369,6 +369,10 @@ section#contact {
   display: none;
 }
 
+section#skills {
+  display: none;
+}
+
 footer {
   display: none;
 }
