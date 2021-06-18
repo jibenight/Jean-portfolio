@@ -92,25 +92,8 @@
   left: 8px;
 }
 
-.container .date {
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 9px);
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  z-index: 1;
-}
-
-.container.left .date {
-  right: -75px;
-}
-
-.container.right .date {
-  left: -75px;
+h4.date {
+  margin: 0px 0 5px 0;
 }
 
 .container .icon {
@@ -217,6 +200,7 @@
 /* style education  */
 .education {
   flex-direction: column;
+  margin-top: 5%;
 }
 
 .education-titre {
