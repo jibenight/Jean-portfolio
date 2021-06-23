@@ -1,4 +1,4 @@
-import '../node_modules/@fortawesome/fontawesome-free/js/all';
+//import '../node_modules/@fortawesome/fontawesome-free/js/all';
 
 const togglenav = document.querySelector('nav');
 const cancel = document.getElementById('cancel');
