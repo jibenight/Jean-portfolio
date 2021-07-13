@@ -130,12 +130,12 @@ h4.date {
     rgba(31, 162, 255, 1) 100%
   );
   position: relative;
-  border-radius: 0 500px 500px 0;
+  border-radius: 25px;
 }
 
 .container.right .content {
   padding: 30px 30px 30px 90px;
-  border-radius: 500px 0 0 500px;
+  /* border-radius: 500px 0 0 500px; */
 }
 
 .container .content h2 {
@@ -145,11 +145,10 @@ h4.date {
   color: white;
 }
 
-.container .content p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 22px;
-  color: #000000;
+.container .content ul li {
+  list-style: disc;
+  margin: 15px 0;
+  line-height: 1.5;
 }
 
 @media (max-width: 767.98px) {
