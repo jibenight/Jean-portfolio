@@ -24,6 +24,7 @@
 
 .experience-titre {
   text-align: center;
+  margin: 5%;
 }
 
 .timeline {
@@ -41,7 +42,7 @@
   background: #000;
   top: 0;
   bottom: 0;
-  left: 50%;
+  /* left: 50%; */
   margin-left: -1px;
 }
 
@@ -52,13 +53,13 @@
   width: 50%;
 }
 
-.container.left {
-  left: 0;
+/* .container.left {
+  left: 50%;
 }
 
 .container.right {
   left: 50%;
-}
+} */
 
 .container::after {
   content: '';
@@ -131,6 +132,7 @@ h4.date {
   );
   position: relative;
   border-radius: 25px;
+  min-width: 1200px;
 }
 
 .container.right .content {
