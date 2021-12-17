@@ -15,6 +15,10 @@ background-image: linear-gradient(to top, #1DA5FE, #00bfef, #00d0ec, #00e0e1, #0
   font-family: 'Comfortaa';
 }
 
+a {
+  cursor: url(../images/click-64.png), pointer;
+}
+
 body,
 p {
   margin: 0;
