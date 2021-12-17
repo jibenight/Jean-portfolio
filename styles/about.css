@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.entete p {
+  font-size: 16px;
+}
+
 .entete .left {
   width: 40vw;
   margin-top: 5%;
