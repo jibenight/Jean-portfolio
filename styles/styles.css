@@ -15,8 +15,12 @@ background-image: linear-gradient(to top, #1DA5FE, #00bfef, #00d0ec, #00e0e1, #0
   font-family: 'Comfortaa';
 }
 
-a {
-  cursor: url(../images/click-64.png), pointer;
+a,
+.pointer:hover {
+  cursor: url(../images/click.png), pointer;
+}
+
+.target:hover {
 }
 
 body,
@@ -161,7 +165,7 @@ button {
   background-position: right center;
   color: #fff;
   text-decoration: none;
-  cursor: url(../images/click-64.png), pointer;
+  cursor: url(../images/click.png), pointer;
 }
 
 /* style de l'icone cancel */
@@ -222,7 +226,7 @@ section#portfolio {
   z-index: 10;
 }
 
-/* style des cards projet */
+/* style des cards projet/portfolio */
 
 .card {
   width: 360px;
@@ -283,57 +287,8 @@ section#portfolio {
   border-radius: 10px;
 }
 
-/* style contact */
-
-.contact-form {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.contact-titre {
-  text-align: center;
-}
-
-.form-right form input,
-textarea {
-  margin: 10px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #000;
-  font-size: 16px;
-}
-
-.form-right form input:focus,
-textarea:focus {
-  border-bottom: 2px solid #1da5fe;
-  font-size: 1.5rem;
-  transition: 500ms;
-}
-
-.form-right form input[type='submit'] {
-  border-bottom: none !important;
-}
-
-.form-right form {
-  margin-top: 7%;
-  width: 40vw;
-  display: flex;
-  flex-direction: column;
-}
-
-.direct-contact {
-  margin-top: 15%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.direct-contact img {
-  width: 50%;
-}
-
-.direct-contact p {
-  font-size: 1.5rem;
+.btn-grad a {
+  color: white;
 }
 
 /* style footer  */
@@ -343,7 +298,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10%;
 }
 footer > * {
   margin: 4%;

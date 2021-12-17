@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/skills.css">
+    <link rel="stylesheet" href="./styles/contact.css">
     <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js "></script>
     <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
     <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
@@ -18,29 +19,29 @@
     <header>
       <nav>
         <div class="flex-centre">
-          <p id="nav-about" class="target">À propos de moi</p>
+          <p id="nav-about" class="target pointer">À propos de moi</p>
           <img
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu À propos de moi"
           />
         </div>
 
-        <div class="flex-centre">
-          <p id="nav-portfolio">Portfolio</p>
+        <div class="flex-centre pointer">
+          <p id="nav-portfolio" class="pointer">Portfolio</p>
           <img
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu portfolio"
           />
         </div>
         <div id="nav-contact" class="flex-centre">
-          <p>Contact</p>
+          <p class="pointer">Contact</p>
           <img
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu contact"
           />
         </div>
         <div id="nav-skills" class="flex-centre">
-          <p>Mes compétences</p>
+          <p class="pointer">Mes compétences</p>
           <img
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu compétences"
@@ -50,7 +51,7 @@
     </header>
     <main class="flex-centre">
       <!-- zone d'accueil  -->
-      <div id="cancel">
+      <div id="cancel" class="pointer">
         <img src="./images/cancel.png" alt="icon pour fermer la page" />
       </div>
 
@@ -264,7 +265,7 @@
                 <h2>Jdesign</h2>
                 <p><i class="fab fa-wordpress fa-5x"></i></p>
                 <p>Réalisation à 100%</p>
-                <button class="btn-grad"><a href="https://www.jdesign.fr" target="_blank"></a>Voir le site</a></button>
+                <button class="btn-grad"><a href="https://www.jdesign.fr" target="_blank">Voir le site</a></button>
               </div>
             </div>
           </div>
@@ -492,18 +493,12 @@
             </div>
           </div>
           <div class="direct-contact">
-            <div class="phone">
-              <img src="./images/phone-call.png" alt="" />
-              <p>(+33)6 11 45 18 56</p>
-            </div>
-            <div class="place">
-              <img src="./images/pin.png" alt="" />
-              <p>Agen</p>
-            </div>
-            <div class="email">
-              <img src="./images/email.png" alt="" />
-              <p>contact@jean-nguyen.dev</p>
-            </div>
+            <div class="contact1"><img src="./images/phone-call.png" alt="icone d'un téléphone avec un degradé bleu" /></div> 
+            <div class="contact2"><p>(+33)6 11 45 18 56</p></div> 
+            <div class="contact3"><img src="./images/pin.png" alt="icone d'un d'un point de localisation avec un degradé bleu" /></div> 
+            <div class="contact4"><p>Agen</p></div> 
+            <div class="contact5"><a href="mailto:contact@jean-nguyen.dev"><img src="./images/email.png" alt="icone d'une enveloppe avec un degradé bleu" /></a></div> 
+            <div class="contact6"><a href="mailto:contact@jean-nguyen.dev"><p>contact@jean-nguyen.dev</p></a></div> 
           </div>
         </div>
       </section>

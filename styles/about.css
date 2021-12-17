@@ -11,7 +11,7 @@
 
 .entete .left {
   width: 40vw;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .entete .right {
@@ -212,15 +212,15 @@ h4.date {
 }
 
 .certificat {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 360px);
   justify-content: center;
   grid-gap: 10px;
 }
 
 .certif-item img {
-  width: 300px;
+  width: 360px;
 }
