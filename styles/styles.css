@@ -20,9 +20,6 @@ a,
   cursor: url(../images/click.png), pointer;
 }
 
-.target:hover {
-}
-
 body,
 p {
   margin: 0;
@@ -97,7 +94,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.text-focus-in {
+/* .text-focus-in {
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -125,7 +122,7 @@ h1 {
     filter: blur(0px);
     opacity: 1;
   }
-}
+} */
 
 .flex-centre {
   display: flex;

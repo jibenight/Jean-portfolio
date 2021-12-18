@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/skills.css">
     <link rel="stylesheet" href="./styles/contact.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js "></script>
     <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
     <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
     
   </head>
   <body>
-    <header>
+    <header class="animate__animated animate__fadeIn animate__delay-2s">
       <nav>
         <div class="flex-centre">
           <p id="nav-about" class="target pointer">À propos de moi</p>
@@ -52,10 +56,10 @@
     <main class="flex-centre">
       <!-- zone d'accueil  -->
       <div id="cancel" class="pointer">
-        <img src="./images/cancel.png" alt="icon pour fermer la page" />
+        <img id="chevron" src="./images/chevron.png" alt="icon pour fermer la page" />
       </div>
 
-      <section id="home">
+      <section id="home" class="animate__animated animate__fadeIn animate__delay-1s">
         <div class="home-left">
           <!-- <img src="./images/banner_bg.jpg" alt="" /> -->
         </div>
@@ -70,7 +74,7 @@
         </div>
       </section>
       <!-- zone à propos de moi  -->
-      <section id="aboutMe" class="animation-hautbas">
+      <section id="aboutMe" class="animate__animated">
         <div class="entete">
           <div class="left">
             <img src="./images/about.jpeg" alt="" />
@@ -246,7 +250,7 @@
         </div>
       </section>
       <!-- zone portfolio  -->
-      <section id="portfolio">
+      <section id="portfolio" class="animate__animated">
         <div class="portfolio-titre">
           <div class="titre">
             <h2>Portfolio</h2>
@@ -508,8 +512,7 @@
           <p>Skills</p>
         </div>
         <div class="skills-1">
-          <div><img src="./images/image-1.jpg" alt="" /></div>
-          <div>blurb</div>
+          <i class="fab fa-github fa-7x"></i>
         </div>
         <div class="titre">
           <h2>Techno</h2>

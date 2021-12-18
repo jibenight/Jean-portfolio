@@ -2,6 +2,7 @@
 
 const togglenav = document.querySelector('nav');
 const cancel = document.getElementById('cancel');
+const chevron = document.getElementById('chevron');
 const home = document.getElementById('home');
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
@@ -12,8 +13,22 @@ cancel.addEventListener('click', function () {
   cancel.style.display = 'none';
   header.style.display = 'block';
   footer.style.display = 'none';
-  document.getElementById('aboutMe').style.display = 'none';
-  document.getElementById('portfolio').style.display = 'none';
+
+  //à propos de moi
+  document.getElementById('aboutMe').classList.remove('animate__slideInDown');
+  document.getElementById('aboutMe').classList.add('animate__slideOutUp');
+  setTimeout(function () {
+    document.getElementById('aboutMe').style.display = 'none';
+  }, 1000);
+
+  // portfolio
+  document
+    .getElementById('portfolio')
+    .classList.remove('animate__slideIntLeft');
+  document.getElementById('portfolio').classList.add('animate__slideOutLeft');
+  setTimeout(function () {
+    document.getElementById('portfolio').style.display = 'none';
+  }, 1000);
   document.getElementById('contact').style.display = 'none';
   document.getElementById('skills').style.display = 'none';
 });
@@ -21,6 +36,7 @@ cancel.addEventListener('click', function () {
 // nav feature
 
 togglenav.addEventListener('click', function (e) {
+  e.defaultPrevented;
   const cible = e.target;
 
   function display() {
@@ -31,16 +47,24 @@ togglenav.addEventListener('click', function (e) {
   }
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
-    document.getElementById('aboutMe').style.display = 'block';
+    const aboutMe = document.getElementById('aboutMe');
+    chevron.style.transform = 'rotate(270deg)';
+    aboutMe.style.display = 'block';
+    aboutMe.classList.remove('animate__slideOutUp');
+    aboutMe.classList.add('animate__slideInDown');
     display();
   }
   if (cible.firstChild.nodeValue == 'Portfolio') {
-    document.getElementById('portfolio').style.display = 'block';
+    const element = document.getElementById('portfolio');
+    cancel.style.display = 'block';
+    chevron.style.transform = 'rotate(180deg)';
+    element.style.display = 'block';
+    element.classList.remove('animate__slideOutLeft');
+    element.classList.add('animate__slideInLeft');
     display();
   }
   if (cible.firstChild.nodeValue == 'Contact') {
     document.getElementById('contact').style.display = 'block';
-
     display();
   }
   if (cible.firstChild.nodeValue == 'Mes compétences') {
