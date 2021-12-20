@@ -30,10 +30,6 @@ p,
   font-family: 'Roboto', sans-serif;
 }
 
-section#aboutMe {
-  max-width: 1200px;
-}
-
 main {
   flex-direction: column;
 }

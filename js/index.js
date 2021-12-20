@@ -9,6 +9,7 @@ const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 //4 Zones
 const aboutMe = document.getElementById('aboutMe');
+const entete = document.getElementById('entete');
 const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
 // cancel icon
@@ -21,15 +22,15 @@ cancel.addEventListener('click', function () {
 
   //à propos de moi
   if (cancel.classList.contains('cancel-aboutMe')) {
-    aboutMe.classList.remove('animate__slideInDown');
-    aboutMe.classList.add('animate__slideOutUp');
-    aboutMe.classList.add('animate__faster');
+    entete.classList.remove('animate__slideInDown');
+    entete.classList.add('animate__slideOutUp');
+    //aboutMe.classList.add('animate__faster');
     setTimeout(function () {
       aboutMe.style.display = 'none';
       home.classList.remove('animate__slideInUp');
       cancel.classList.remove('cancel-aboutMe');
-      aboutMe.classList.remove('animate__slideOutUp');
-      aboutMe.classList.remove('animate__faster');
+      entete.classList.remove('animate__slideOutUp');
+      //aboutMe.classList.remove('animate__faster');
     }, 1000);
   }
 
@@ -80,7 +81,7 @@ togglenav.addEventListener('click', function (e) {
     cancel.classList.add('cancel-aboutMe');
     chevron.style.transform = 'rotate(270deg)';
     aboutMe.style.display = 'block';
-    aboutMe.classList.add('animate__slideInDown');
+    entete.classList.add('animate__slideInDown');
     home.classList.add('animate__slideInUp');
   }
   if (cible.firstChild.nodeValue == 'Portfolio') {
