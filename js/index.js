@@ -35,13 +35,15 @@ cancel.addEventListener('click', function () {
 
   // portfolio
   if (cancel.classList.contains('cancel-portfolio')) {
+    home.classList.remove('animate__slideOutRight');
     portfolio.classList.remove('animate__slideInLeft');
-    portfolio.classList.add('animate__backOutLeft');
+    portfolio.classList.add('animate__slideOutLeft');
+    home.classList.add('animate__slideInRight');
     setTimeout(function () {
       portfolio.style.display = 'none';
       home.classList.remove('animate__slideInRight');
       cancel.classList.remove('cancel-portfolio');
-      portfolio.classList.remove('animate__backOutLeft');
+      portfolio.classList.remove('animate__slideOutLeft');
     }, 1000);
   }
 
@@ -49,13 +51,13 @@ cancel.addEventListener('click', function () {
   if (cancel.classList.contains('cancel-contact')) {
     contact.classList.remove('animate__slideInRight');
     //contact.classList.add('animate__faster');
-    contact.classList.add('animate__slideOutRight');
+    contact.classList.add('animate__slideOutRight1');
     setTimeout(function () {
       contact.style.display = 'none';
       home.classList.remove('animate__slideInLeft');
       cancel.classList.remove('cancel-contact');
-      contact.classList.remove('animate__slideOutRight');
-      contact.classList.remove('animate__faster');
+      contact.classList.remove('animate__slideOutRight1');
+      //contact.classList.remove('animate__faster');
     }, 1000);
   }
 
@@ -86,7 +88,7 @@ togglenav.addEventListener('click', function (e) {
     chevron.style.transform = 'rotate(180deg)';
     portfolio.style.display = 'block';
     portfolio.classList.add('animate__slideInLeft');
-    home.classList.add('animate__slideInRight');
+    home.classList.add('animate__slideOutRight');
   }
   if (cible.firstChild.nodeValue == 'Contact') {
     cancel.classList.add('cancel-contact');

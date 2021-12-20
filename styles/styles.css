@@ -339,3 +339,32 @@ section#skills {
 footer {
   display: none;
 }
+
+@-webkit-keyframes slideOutRight1 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(130%, 0, 0);
+    transform: translate3d(130%, 0, 0);
+  }
+}
+/* @keyframes slideOutRight1 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(130%, 0, 0);
+  }
+} */
+.animate__slideOutRight1 {
+  -webkit-animation-name: slideOutRight1;
+  animation-name: slideOutRight1;
+}
