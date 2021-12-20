@@ -12,6 +12,41 @@ const aboutMe = document.getElementById('aboutMe');
 const entete = document.getElementById('entete');
 const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
+
+// add and clean display animation
+const animateCSS = (
+  animationIn,
+  nameIn,
+  animationOut,
+  nameOut,
+  home,
+  prefix = 'animate__'
+) =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    //for animation in
+    const animationNameIn = `${prefix}${nameIn}`;
+    const nodeIn = document.querySelector(animationIn);
+    nodeIn.classList.add(`${prefix}animated`, animationNameIn);
+    //for animation Out
+    const animationNameOut = `${prefix}${nameOut}`;
+    const nodeOut = document.querySelector(animationOut);
+    nodeOut.classList.add(`${prefix}animated`, animationNameOut);
+    home.style.display = 'none';
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      nodeIn.classList.remove(`${prefix}animated`, animationNameIn);
+      nodeOut.classList.remove(`${prefix}animated`, animationNameOut);
+      resolve('Animation ended');
+    }
+
+    nodeIn.addEventListener('animationend', handleAnimationEnd, { once: true });
+    nodeOut.addEventListener('animationend', handleAnimationEnd, {
+      once: true,
+    });
+  });
+
 // cancel icon
 cancel.addEventListener('click', function () {
   home.style.display = 'flex';
@@ -22,30 +57,17 @@ cancel.addEventListener('click', function () {
 
   //à propos de moi
   if (cancel.classList.contains('cancel-aboutMe')) {
-    entete.classList.remove('animate__slideInDown');
-    entete.classList.add('animate__slideOutUp');
-    //aboutMe.classList.add('animate__faster');
-    setTimeout(function () {
-      aboutMe.style.display = 'none';
-      home.classList.remove('animate__slideInUp');
-      cancel.classList.remove('cancel-aboutMe');
-      entete.classList.remove('animate__slideOutUp');
-      //aboutMe.classList.remove('animate__faster');
-    }, 1000);
+    animateCSS('#entete', 'slideOutUp', '#home', 'slideInUp').then(
+      (aboutMe.style.display = 'none'),
+      cancel.classList.remove('cancel-aboutMe')
+    );
   }
-
   // portfolio
   if (cancel.classList.contains('cancel-portfolio')) {
-    home.classList.remove('animate__slideOutRight');
-    portfolio.classList.remove('animate__slideInLeft');
-    portfolio.classList.add('animate__slideOutLeft');
-    home.classList.add('animate__slideInRight');
-    setTimeout(function () {
-      portfolio.style.display = 'none';
-      home.classList.remove('animate__slideInRight');
-      cancel.classList.remove('cancel-portfolio');
-      portfolio.classList.remove('animate__slideOutLeft');
-    }, 1000);
+    animateCSS('#portfolio', 'slideOutLeft', '#home', 'slideInRight').then(
+      (portfolio.style.display = 'none'),
+      cancel.classList.remove('cancel-portfolio')
+    );
   }
 
   // contact
@@ -65,31 +87,28 @@ cancel.addEventListener('click', function () {
   document.getElementById('skills').style.display = 'none';
 });
 
-// nav feature
-
+// Animation in display
 togglenav.addEventListener('click', function (e) {
   e.defaultPrevented;
   const cible = e.target;
-
-  home.style.display = 'none';
   cancel.style.display = 'block';
   header.style.display = 'none';
   footer.style.display = 'flex';
-  home.classList.remove('animate__fadeIn');
+  //home.classList.remove('animate__fadeIn');
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
     cancel.classList.add('cancel-aboutMe');
     chevron.style.transform = 'rotate(270deg)';
     aboutMe.style.display = 'block';
-    entete.classList.add('animate__slideInDown');
-    home.classList.add('animate__slideInUp');
+    animateCSS('#entete', 'slideInDown', '#home', 'slideOutDown', 'home');
   }
   if (cible.firstChild.nodeValue == 'Portfolio') {
     cancel.classList.add('cancel-portfolio');
     chevron.style.transform = 'rotate(180deg)';
     portfolio.style.display = 'block';
-    portfolio.classList.add('animate__slideInLeft');
-    home.classList.add('animate__slideOutRight');
+    animateCSS('#portfolio', 'slideInLeft', '#home', 'slideOutRight').then(
+      (home.style.display = 'none')
+    );
   }
   if (cible.firstChild.nodeValue == 'Contact') {
     cancel.classList.add('cancel-contact');
