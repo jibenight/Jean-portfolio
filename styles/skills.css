@@ -5,3 +5,22 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
+.flex-skills {
+  /* width: 8vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-skills p {
+  font-size: 1.5rem;
+  margin: 15px;
+  text-align: center;
+}
+
+/* .icons-skills {
+  background-color: blanchedalmond;
+  height: 300px;
+} */

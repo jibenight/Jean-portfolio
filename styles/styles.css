@@ -348,8 +348,8 @@ footer {
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(130%, 0, 0);
-    transform: translate3d(130%, 0, 0);
+    -webkit-transform: translate3d(180%, 0, 0);
+    transform: translate3d(180%, 0, 0);
   }
 }
 /* @keyframes slideOutRight1 {
