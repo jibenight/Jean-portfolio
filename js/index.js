@@ -15,6 +15,8 @@ const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
 const skills = document.getElementById('skills');
 
+//animateCSS('#home', 'fadeIn');
+
 // add and clean display animation
 const animateCSS = (
   animationIn,
@@ -150,5 +152,5 @@ togglenav.addEventListener('click', function (e) {
       }, timeout)
     );
   }
-  animateCSS('#chevron', 'backInRight');
+  //animateCSS('#chevron', 'backInRight');
 });
