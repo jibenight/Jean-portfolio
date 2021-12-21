@@ -90,36 +90,6 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* .text-focus-in {
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-} */
-
 .flex-centre {
   display: flex;
   justify-content: center;
@@ -127,7 +97,6 @@ h1 {
 }
 
 /* style bouton */
-
 button {
   border: none;
 }
@@ -162,7 +131,6 @@ button {
 }
 
 /* style de l'icone cancel */
-
 #cancel img {
   width: 64px;
   position: fixed;
@@ -199,7 +167,6 @@ section#home {
 }
 
 /* style portfolio */
-
 section#portfolio {
   display: flex;
   flex-direction: column;
@@ -308,59 +275,26 @@ footer li a {
   color: #1fa2ff;
 }
 
-/* header {
-  display: none;
-} */
-
-/* section#home {
-  display: none;
-} */
-
 section#aboutMe {
   display: none;
+  width: 100vw;
 }
 
 section#portfolio {
   display: none;
+  width: 100vw;
 }
 
 section#contact {
   display: none;
+  width: 100vw;
 }
 
 section#skills {
   display: none;
+  width: 100vw;
 }
 
 footer {
   display: none;
-}
-
-@-webkit-keyframes slideOutRight1 {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(180%, 0, 0);
-    transform: translate3d(180%, 0, 0);
-  }
-}
-/* @keyframes slideOutRight1 {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(150%, 0, 0);
-    transform: translate3d(130%, 0, 0);
-  }
-} */
-.animate__slideOutRight1 {
-  -webkit-animation-name: slideOutRight1;
-  animation-name: slideOutRight1;
 }

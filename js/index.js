@@ -7,11 +7,13 @@ const chevron = document.getElementById('chevron');
 const home = document.getElementById('home');
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
+const timeout = 1000;
 //4 Zones
 const aboutMe = document.getElementById('aboutMe');
 const entete = document.getElementById('entete');
 const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
+const skills = document.getElementById('skills');
 
 // add and clean display animation
 const animateCSS = (
@@ -19,7 +21,6 @@ const animateCSS = (
   nameIn,
   animationOut,
   nameOut,
-  home,
   prefix = 'animate__'
 ) =>
   // We create a Promise and return it
@@ -32,7 +33,6 @@ const animateCSS = (
     const animationNameOut = `${prefix}${nameOut}`;
     const nodeOut = document.querySelector(animationOut);
     nodeOut.classList.add(`${prefix}animated`, animationNameOut);
-    home.style.display = 'none';
     // When the animation ends, we clean the classes and resolve the Promise
     function handleAnimationEnd(event) {
       event.stopPropagation();
@@ -40,7 +40,6 @@ const animateCSS = (
       nodeOut.classList.remove(`${prefix}animated`, animationNameOut);
       resolve('Animation ended');
     }
-
     nodeIn.addEventListener('animationend', handleAnimationEnd, { once: true });
     nodeOut.addEventListener('animationend', handleAnimationEnd, {
       once: true,
@@ -55,36 +54,53 @@ cancel.addEventListener('click', function () {
   footer.style.display = 'none';
   chevron.style.transform = 'rotate(0deg)';
 
+  const startTop = params => {
+    const top = params.offsetTop;
+    window.scrollTo(0, top);
+  };
+
   //à propos de moi
   if (cancel.classList.contains('cancel-aboutMe')) {
+    startTop(aboutMe);
     animateCSS('#entete', 'slideOutUp', '#home', 'slideInUp').then(
-      (aboutMe.style.display = 'none'),
-      cancel.classList.remove('cancel-aboutMe')
+      setTimeout(() => {
+        (aboutMe.style.display = 'none'),
+          cancel.classList.remove('cancel-aboutMe');
+      }, timeout)
     );
   }
   // portfolio
   if (cancel.classList.contains('cancel-portfolio')) {
+    startTop(portfolio);
     animateCSS('#portfolio', 'slideOutLeft', '#home', 'slideInRight').then(
-      (portfolio.style.display = 'none'),
-      cancel.classList.remove('cancel-portfolio')
+      setTimeout(() => {
+        (portfolio.style.display = 'none'),
+          cancel.classList.remove('cancel-portfolio');
+      }, timeout)
     );
   }
 
   // contact
   if (cancel.classList.contains('cancel-contact')) {
-    contact.classList.remove('animate__slideInRight');
-    //contact.classList.add('animate__faster');
-    contact.classList.add('animate__slideOutRight1');
-    setTimeout(function () {
-      contact.style.display = 'none';
-      home.classList.remove('animate__slideInLeft');
-      cancel.classList.remove('cancel-contact');
-      contact.classList.remove('animate__slideOutRight1');
-      //contact.classList.remove('animate__faster');
-    }, 1000);
+    startTop(contact);
+    animateCSS('#contact', 'slideOutRight', '#home', 'slideInLeft').then(
+      setTimeout(() => {
+        (contact.style.display = 'none'),
+          cancel.classList.remove('cancel-contact');
+      }, timeout)
+    );
   }
 
-  document.getElementById('skills').style.display = 'none';
+  // skills
+  if (cancel.classList.contains('cancel-skills')) {
+    startTop(skills);
+    animateCSS('#skills', 'slideOutDown', '#home', 'slideInDown').then(
+      setTimeout(() => {
+        (skills.style.display = 'none'),
+          cancel.classList.remove('cancel-skills');
+      }, timeout)
+    );
+  }
 });
 
 // Animation in display
@@ -94,29 +110,45 @@ togglenav.addEventListener('click', function (e) {
   cancel.style.display = 'block';
   header.style.display = 'none';
   footer.style.display = 'flex';
-  //home.classList.remove('animate__fadeIn');
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
     cancel.classList.add('cancel-aboutMe');
     chevron.style.transform = 'rotate(270deg)';
     aboutMe.style.display = 'block';
-    animateCSS('#entete', 'slideInDown', '#home', 'slideOutDown', 'home');
+    animateCSS('#entete', 'slideInDown', '#home', 'slideOutDown').then(
+      setTimeout(() => {
+        home.style.display = 'none';
+      }, timeout)
+    );
   }
   if (cible.firstChild.nodeValue == 'Portfolio') {
     cancel.classList.add('cancel-portfolio');
     chevron.style.transform = 'rotate(180deg)';
     portfolio.style.display = 'block';
     animateCSS('#portfolio', 'slideInLeft', '#home', 'slideOutRight').then(
-      (home.style.display = 'none')
+      setTimeout(() => {
+        home.style.display = 'none';
+      }, timeout)
     );
   }
   if (cible.firstChild.nodeValue == 'Contact') {
     cancel.classList.add('cancel-contact');
     contact.style.display = 'block';
-    contact.classList.add('animate__slideInRight');
-    home.classList.add('animate__slideInLeft');
+    animateCSS('#contact', 'slideInRight', '#home', 'slideOutLeft').then(
+      setTimeout(() => {
+        home.style.display = 'none';
+      }, timeout)
+    );
   }
   if (cible.firstChild.nodeValue == 'Mes compétences') {
-    document.getElementById('skills').style.display = 'block';
+    skills.style.display = 'block';
+    cancel.classList.add('cancel-skills');
+    chevron.style.transform = 'rotate(90deg)';
+    animateCSS('#skills', 'slideInUp', '#home', 'slideOutUp').then(
+      setTimeout(() => {
+        home.style.display = 'none';
+      }, timeout)
+    );
   }
+  animateCSS('#chevron', 'backInRight');
 });
