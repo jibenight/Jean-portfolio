@@ -3,6 +3,7 @@
 .contact-form {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 5%;
 }
 
 .contact-titre {
@@ -89,4 +90,8 @@ textarea:focus {
 
 .direct-contact p {
   font-size: 1.5rem;
+}
+
+#contact-animation {
+  height: 100vh;
 }

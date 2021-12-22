@@ -157,6 +157,59 @@ button {
   z-index: 99;
 }
 
+/* animation fade in */
+.fade-in-image {
+  animation: chevronFade 2s;
+  -webkit-animation: chevronFade 2s;
+  -moz-animation: chevronFade 2s;
+  -o-animation: chevronFade 2s;
+  -ms-animation: chevronFade 2s;
+}
+@keyframes chevronFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes chevronFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes chevronFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes chevronFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes chevronFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* style section home */
 section#home {
   position: absolute;

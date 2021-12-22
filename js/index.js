@@ -16,7 +16,9 @@ const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
 const skills = document.getElementById('skills');
 
-//animateCSS('#home', 'fadeIn');
+document.onload = () => {
+  home.classList.add('fade-in-animation');
+};
 
 // add and clean display animation
 const animateCSS = (
@@ -56,6 +58,7 @@ cancel.addEventListener('click', function () {
   header.style.display = 'block';
   footer.style.display = 'none';
   chevron.style.transform = 'rotate(0deg)';
+  chevron.classList.remove('fade-in-image');
   arrow.style.display = 'none';
   arrow.style.visibility = 'visible';
   arrow.classList.remove('animate__animated', 'animate__fadeOut');
@@ -117,6 +120,7 @@ togglenav.addEventListener('click', function (e) {
   cancel.style.display = 'block';
   header.style.display = 'none';
   footer.style.display = 'flex';
+  chevron.classList.add('fade-in-image');
 
   // show arrow for content
   const showArrow = () => {
@@ -125,22 +129,21 @@ togglenav.addEventListener('click', function (e) {
       animateCSS('#arrow-animation', 'shakeY');
     }, timeout);
     document.onscroll = () => {
-      animateCSS('#arrow-down', 'fadeOut').then(
-        (arrow.style.visibility = 'hidden')
-      );
+      animateCSS('#arrow-down', 'fadeOut');
     };
   };
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
     cancel.classList.add('cancel-aboutMe');
     chevron.style.transform = 'rotate(270deg)';
+    //chevron.classlist.add('fade-in-image');
     aboutMe.style.display = 'block';
+    showArrow();
     animateCSS('#entete', 'slideInDown', '#home', 'slideOutDown').then(
       setTimeout(() => {
         home.style.display = 'none';
       }, timeout)
     );
-    showArrow();
   }
   if (cible.firstChild.nodeValue == 'Portfolio') {
     cancel.classList.add('cancel-portfolio');
@@ -174,5 +177,4 @@ togglenav.addEventListener('click', function (e) {
     );
     showArrow();
   }
-  //animateCSS('#chevron', 'backInRight');
 });
