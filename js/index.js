@@ -16,9 +16,9 @@ const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
 const skills = document.getElementById('skills');
 
-document.onload = () => {
-  home.classList.add('fade-in-animation');
-};
+// document.onload = () => {
+//   home.classList.add('fade-in-animation');
+// };
 
 // add and clean display animation
 const animateCSS = (
@@ -120,7 +120,9 @@ togglenav.addEventListener('click', function (e) {
   cancel.style.display = 'block';
   header.style.display = 'none';
   footer.style.display = 'flex';
-  chevron.classList.add('fade-in-image');
+  setTimeout(() => {
+    chevron.classList.add('fade-in-image');
+  }, timeout);
 
   // show arrow for content
   const showArrow = () => {
