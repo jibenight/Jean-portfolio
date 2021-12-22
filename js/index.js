@@ -2,6 +2,7 @@
 //import 'animate.css';
 
 const togglenav = document.querySelector('nav');
+const arrow = document.getElementById('arrow-down');
 const cancel = document.getElementById('cancel');
 const chevron = document.getElementById('chevron');
 const home = document.getElementById('home');
@@ -55,6 +56,9 @@ cancel.addEventListener('click', function () {
   header.style.display = 'block';
   footer.style.display = 'none';
   chevron.style.transform = 'rotate(0deg)';
+  arrow.style.display = 'none';
+  arrow.style.visibility = 'visible';
+  arrow.classList.remove('animate__animated', 'animate__fadeOut');
 
   const startTop = params => {
     const top = params.offsetTop;
@@ -95,6 +99,7 @@ cancel.addEventListener('click', function () {
 
   // skills
   if (cancel.classList.contains('cancel-skills')) {
+    document.getElementById('skills-techno').style.display = 'none';
     startTop(skills);
     animateCSS('#skills', 'slideOutDown', '#home', 'slideInDown').then(
       setTimeout(() => {
@@ -113,6 +118,19 @@ togglenav.addEventListener('click', function (e) {
   header.style.display = 'none';
   footer.style.display = 'flex';
 
+  // show arrow for content
+  const showArrow = () => {
+    setTimeout(() => {
+      arrow.style.display = 'block';
+      animateCSS('#arrow-animation', 'shakeY');
+    }, timeout);
+    document.onscroll = () => {
+      animateCSS('#arrow-down', 'fadeOut').then(
+        (arrow.style.visibility = 'hidden')
+      );
+    };
+  };
+
   if (cible.firstChild.nodeValue == 'À propos de moi') {
     cancel.classList.add('cancel-aboutMe');
     chevron.style.transform = 'rotate(270deg)';
@@ -122,6 +140,7 @@ togglenav.addEventListener('click', function (e) {
         home.style.display = 'none';
       }, timeout)
     );
+    showArrow();
   }
   if (cible.firstChild.nodeValue == 'Portfolio') {
     cancel.classList.add('cancel-portfolio');
@@ -141,6 +160,7 @@ togglenav.addEventListener('click', function (e) {
         home.style.display = 'none';
       }, timeout)
     );
+    showArrow();
   }
   if (cible.firstChild.nodeValue == 'Mes compétences') {
     skills.style.display = 'block';
@@ -149,8 +169,10 @@ togglenav.addEventListener('click', function (e) {
     animateCSS('#skills', 'slideInUp', '#home', 'slideOutUp').then(
       setTimeout(() => {
         home.style.display = 'none';
+        document.getElementById('skills-techno').style.display = 'block';
       }, timeout)
     );
+    showArrow();
   }
   //animateCSS('#chevron', 'backInRight');
 });

@@ -143,6 +143,20 @@ button {
   z-index: 99;
 }
 
+/* style fleche bas */
+#arrow-down img {
+  width: 3%;
+  position: fixed;
+  right: 50%;
+  bottom: 10px;
+  animation-duration: 1s;
+}
+
+#arrow-down {
+  display: none;
+  z-index: 99;
+}
+
 /* style section home */
 section#home {
   position: absolute;
@@ -184,6 +198,7 @@ section#portfolio {
   align-items: center;
   flex-wrap: wrap;
   z-index: 10;
+  margin-bottom: 5%;
 }
 
 /* style des cards projet/portfolio */
@@ -249,6 +264,15 @@ section#portfolio {
 
 .btn-grad a {
   color: white;
+}
+
+/* style fleche bas */
+#arrow img {
+  width: 3%;
+  position: fixed;
+  right: 50%;
+  bottom: 10px;
+  display: none;
 }
 
 /* style footer  */

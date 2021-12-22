@@ -1,10 +1,10 @@
 .skills {
-  width: 50vw;
-  margin-top: 5%;
-  margin-bottom: 3%;
+  width: 70vw;
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
+  margin: auto;
 }
 
 .flex-skills {
@@ -21,6 +21,24 @@
   text-align: center;
 }
 
-#skills-competences {
+.skills-animations {
+  width: 80vw;
   height: 100vh;
+  margin: auto;
+  text-align: center;
+}
+.skills-animations :nth-child(2) {
+  margin-top: 3%;
+}
+
+#skills-techno :nth-child(2) {
+  color: #1fa2ff;
+}
+
+#skills-techno {
+  display: none;
+}
+
+.icons-skills img {
+  width: 50%;
 }
