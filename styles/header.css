@@ -11,14 +11,11 @@ header nav p {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: #000;
-  font-size: 1.2rem;
-}
-
-nav p {
+  font-size: 1.4rem;
   cursor: pointer;
   font-weight: bolder;
+  padding: 5px;
 }
-
 nav img {
   display: none;
 }
@@ -27,11 +24,6 @@ nav p:hover + img {
   display: inline-block;
   cursor: pointer;
 }
-
-/* nav p:hover img:first-of-type {
-  display: inline-block;
-  
-} */
 
 nav div:nth-child(1) {
   position: fixed;
@@ -46,20 +38,6 @@ nav div:nth-child(1) img {
   transform: rotate(90deg);
 }
 
-.animation-hautbas {
-  animation: section-bas 500ms linear;
-}
-
-@keyframes section-bas {
-  0% {
-    transform: translateY(-100vh);
-  }
-
-  100% {
-    transform: translateY(0vh);
-  }
-}
-
 nav div:nth-child(2) {
   position: fixed;
   top: 0;
@@ -71,33 +49,6 @@ nav div:nth-child(2) {
   flex-direction: column;
 }
 
-.animation-gauche1 {
-  animation: gauche1 500ms linear;
-}
-
-@keyframes gauche1 {
-  from {
-    transform: translateX(-100vw);
-  }
-
-  to {
-    transform: translateX(0vw);
-  }
-}
-
-.animation-gauche2 {
-  animation: gauche2 500ms linear;
-}
-
-@keyframes gauche2 {
-  from {
-    transform: translateX(0vw);
-  }
-
-  to {
-    transform: translateX(-100vw);
-  }
-}
 nav div:nth-child(3) {
   position: fixed;
   top: 0;
@@ -111,20 +62,6 @@ nav div:nth-child(3) {
 
 nav div:nth-child(3) img {
   transform: rotate(180deg);
-}
-
-.animation-droitegauche {
-  animation: droite 700ms linear;
-}
-
-@keyframes droite {
-  from {
-    transform: translateX(200vw);
-  }
-
-  to {
-    transform: translateX(0vw);
-  }
 }
 
 nav div:nth-child(4) {

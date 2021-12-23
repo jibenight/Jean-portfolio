@@ -16,10 +16,6 @@ const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
 const skills = document.getElementById('skills');
 
-// document.onload = () => {
-//   home.classList.add('fade-in-animation');
-// };
-
 // add and clean display animation
 const animateCSS = (
   animationIn,
@@ -117,10 +113,10 @@ cancel.addEventListener('click', function () {
 togglenav.addEventListener('click', function (e) {
   e.defaultPrevented;
   const cible = e.target;
-  cancel.style.display = 'block';
   header.style.display = 'none';
   footer.style.display = 'flex';
   setTimeout(() => {
+    cancel.style.display = 'block';
     chevron.classList.add('fade-in-image');
   }, timeout);
 

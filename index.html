@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jean - developpeur web</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
+    
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/skills.css">
     <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/portfolio.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -25,6 +27,7 @@
         <div class="flex-centre">
           <p id="nav-about" class="target pointer">À propos de moi</p>
           <img
+            class="fade-in-image"
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu À propos de moi"
           />
@@ -33,6 +36,7 @@
         <div class="flex-centre pointer">
           <p id="nav-portfolio" class="pointer">Portfolio</p>
           <img
+            class="fade-in-image"
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu portfolio"
           />
@@ -40,6 +44,7 @@
         <div id="nav-contact" class="flex-centre">
           <p class="pointer">Contact</p>
           <img
+            class="fade-in-image"
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu contact"
           />
@@ -47,13 +52,14 @@
         <div id="nav-skills" class="flex-centre">
           <p class="pointer">Mes compétences</p>
           <img
+            class="fade-in-image"
             src="./images/chevron.png"
             alt="Chevron en gradient bleu du menu compétences"
           />
         </div>
       </nav>
     </header>
-    <main class="flex-centre">
+    <main class="flex-centre animate__animated animate__fadeIn animate__delay-1s">
       <!-- zone d'accueil  -->
       <div id="cancel" class="pointer">
         <img id="chevron" src="./images/chevron.png" alt="icon pour fermer la page" />
