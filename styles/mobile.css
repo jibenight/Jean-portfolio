@@ -1,0 +1,143 @@
+@media only screen and (max-width: 720px) {
+  /* zone home    */
+  #chevron {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .titre {
+    margin-top: 20%;
+  }
+
+  .titre h2 {
+    font-size: 1.5rem;
+  }
+  section#home {
+    background: white;
+  }
+
+  .home-right {
+    margin-left: 0;
+    width: 40vw;
+  }
+
+  #entete p {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .timeline::after {
+    left: 10px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .container.right .content {
+    padding: 25px;
+    width: 94vw;
+  }
+
+  .container.right::after {
+    left: 2px;
+  }
+
+  .container.right::before {
+    left: 10px;
+    border-color: transparent #1da5fe transparent transparent;
+  }
+  .container.right .content {
+    border-radius: 15px;
+  }
+
+  /* header */
+  header nav p {
+    font-size: 1rem;
+  }
+
+  /* about me */
+  #entete {
+    display: block;
+  }
+  #entete .left {
+    display: none;
+  }
+
+  #entete .right {
+    width: 90vw;
+    margin: 10px;
+  }
+
+  .right {
+    border-radius: 15px;
+  }
+
+  .container::before {
+    width: 16px;
+  }
+
+  .container.right .icon {
+    left: 25px;
+  }
+
+  .content {
+  }
+
+  .certificat {
+    grid-template-columns: 1fr;
+  }
+
+  .certif-item img {
+    width: 100%;
+  }
+
+  /* portfolio */
+  .card {
+    margin: 5%;
+  }
+
+  /* contact */
+  .form-left {
+    display: none;
+  }
+
+  .form-right form {
+    width: 100vw;
+  }
+
+  .direct-contact {
+    display: inline-block;
+  }
+
+  .direct-contact img {
+    width: 20vh;
+    margin-top: 10%;
+  }
+
+  /* Skills */
+
+  .skills {
+    margin-top: 20%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills img {
+    width: 17vw;
+  }
+  .skills p {
+    font-size: 1.2rem;
+  }
+
+  .flex-skills {
+    margin: 2%;
+  }
+
+  .fa-7x {
+    font-size: 5em;
+  }
+} /*fin */

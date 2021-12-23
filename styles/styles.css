@@ -289,3 +289,8 @@ section#skills {
 footer {
   display: none;
 }
+
+/* optimisation chrome */
+
+.animate__animated {
+}

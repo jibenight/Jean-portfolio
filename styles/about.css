@@ -19,8 +19,6 @@
 
 #entete .right {
   width: 40vw;
-
-  position: relative;
 }
 
 /* style expérience */
@@ -157,51 +155,6 @@ h4.date {
   list-style: disc;
   margin: 15px 0;
   line-height: 1.5;
-}
-
-@media (max-width: 767.98px) {
-  .timeline::after {
-    left: 90px;
-  }
-
-  .container {
-    width: 100%;
-    padding-left: 120px;
-    padding-right: 30px;
-  }
-
-  .container.right {
-    left: 0%;
-  }
-
-  .container.left::after,
-  .container.right::after {
-    left: 82px;
-  }
-
-  .container.left::before,
-  .container.right::before {
-    left: 100px;
-    border-color: transparent #1da5fe transparent transparent;
-  }
-
-  .container.left .date,
-  .container.right .date {
-    right: auto;
-    left: 15px;
-  }
-
-  .container.left .icon,
-  .container.right .icon {
-    right: auto;
-    left: 146px;
-  }
-
-  .container.left .content,
-  .container.right .content {
-    padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
-  }
 }
 
 /* style education  */

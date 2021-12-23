@@ -67,6 +67,7 @@ cancel.addEventListener('click', function () {
   //à propos de moi
   if (cancel.classList.contains('cancel-aboutMe')) {
     startTop(aboutMe);
+
     animateCSS('#entete', 'slideOutUp', '#home', 'slideInUp').then(
       setTimeout(() => {
         (aboutMe.style.display = 'none'),
@@ -176,3 +177,7 @@ togglenav.addEventListener('click', function (e) {
     showArrow();
   }
 });
+
+// Media querie
+if (window.matchMedia('(max-width: 720px)').matches) {
+}
