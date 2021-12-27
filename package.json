@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jibenight/jean-portfolio#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "animate.css": "^4.1.1"
+    "animate.css": "^4.1.1",
+    "express": "^4.17.2"
   }
 }

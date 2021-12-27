@@ -1,5 +1,4 @@
-//import '../node_modules/@fortawesome/fontawesome-free/js/all';
-//import 'animate.css';
+// import '../node_modules/@fortawesome/fontawesome-free/js/all';
 
 const togglenav = document.querySelector('nav');
 const arrow = document.getElementById('arrow-down');
@@ -123,13 +122,13 @@ togglenav.addEventListener('click', function (e) {
 
   // show arrow for content
   const showArrow = () => {
-    setTimeout(() => {
-      arrow.style.display = 'block';
-      animateCSS('#arrow-animation', 'shakeY');
-    }, timeout);
-    document.onscroll = () => {
-      animateCSS('#arrow-down', 'fadeOut');
-    };
+    // setTimeout(() => {
+    //   arrow.style.display = 'block';
+    //   animateCSS('#arrow-animation', 'shakeY');
+    // }, timeout);
+    // document.onscroll = () => {
+    //   animateCSS('#arrow-down', 'fadeOut');
+    // };
   };
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
