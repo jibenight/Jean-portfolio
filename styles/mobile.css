@@ -85,9 +85,6 @@
     left: 25px;
   }
 
-  .content {
-  }
-
   .certificat {
     grid-template-columns: 1fr;
   }

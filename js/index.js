@@ -122,13 +122,13 @@ togglenav.addEventListener('click', function (e) {
 
   // show arrow for content
   const showArrow = () => {
-    // setTimeout(() => {
-    //   arrow.style.display = 'block';
-    //   animateCSS('#arrow-animation', 'shakeY');
-    // }, timeout);
-    // document.onscroll = () => {
-    //   animateCSS('#arrow-down', 'fadeOut');
-    // };
+    setTimeout(() => {
+      arrow.style.display = 'block';
+      animateCSS('#arrow-animation', 'shakeY');
+    }, timeout);
+    document.onscroll = () => {
+      animateCSS('#arrow-down', 'fadeOut');
+    };
   };
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
@@ -161,7 +161,6 @@ togglenav.addEventListener('click', function (e) {
         home.style.display = 'none';
       }, timeout)
     );
-    showArrow();
   }
   if (cible.firstChild.nodeValue == 'Mes compétences') {
     skills.style.display = 'block';
@@ -180,3 +179,13 @@ togglenav.addEventListener('click', function (e) {
 // Media querie
 if (window.matchMedia('(max-width: 720px)').matches) {
 }
+
+// animation form
+const succesMessage = document.getElementById('succes-message');
+const formulaire = document.getElementById('formulaire');
+
+formulaire.addEventListener('submit', event => {
+  formulaire.style.display = 'none';
+  succesMessage.style.display = 'grid';
+  animateCSS('#send-message', 'bounceInRight');
+});
