@@ -1,3 +1,7 @@
+if (typeof PhusionPassenger !== 'undefined') {
+  PhusionPassenger.configure({ autoInstall: false });
+}
+
 require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
@@ -69,6 +73,10 @@ app.post('/', function (request, response) {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+if (typeof PhusionPassenger !== 'undefined') {
+  app.listen('passenger');
+} else {
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+}
