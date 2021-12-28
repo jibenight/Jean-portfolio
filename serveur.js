@@ -40,7 +40,7 @@ app.use(log);
 app.post('/', function (request, response) {
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'mail.jean-nguyen.dev',
     port: 465,
     secure: true,
     auth: {
