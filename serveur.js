@@ -44,7 +44,7 @@ app.post('/', function (request, response) {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.GMAIL_USER, // this should be YOUR GMAIL account
+      user: process.env.ACCOUNT_USER, // this should be YOUR GMAIL account
       pass: process.env.PASSWORD, // this should be your password
     },
   });
@@ -77,6 +77,6 @@ if (typeof PhusionPassenger !== 'undefined') {
   app.listen('passenger');
 } else {
   app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
   });
 }
