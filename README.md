@@ -1,6 +1,6 @@
 # Jean Nguyen Portfolio
 
-package : - animate.css
+Package : - animate.css
           - fontawsome
       
 Framework: - Express
