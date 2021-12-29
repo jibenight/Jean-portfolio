@@ -2,7 +2,7 @@
   "name": "jean-portfolio",
   "version": "1.0.0",
   "description": "Site one page Portfolio Jean Nguyen",
-  "main": "./serveur.js",
+  "source": "index.html",
   "scripts": {
     "serveur": "node serveur.js"
   },
