@@ -9,10 +9,9 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// enable static files pointing to the folder "public"
+// enable static files pointing to the folder "src"
 // this can be used to serve the index.html file
-app.use(express.static(path.join(__dirname, '/')));
-
+app.use(express.static(path.join(__dirname, '/dist')));
 //render index.html page
 app.get('/', (request, response) => {
   response.render(index.html);
