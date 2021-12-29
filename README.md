@@ -1,1 +1,1 @@
-# jean-portfolio
+# Jean Nguyen Portfolio

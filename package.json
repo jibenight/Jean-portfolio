@@ -4,7 +4,6 @@
   "description": "Site one page Portfolio Jean Nguyen",
   "main": "./serveur.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serveur": "node serveur.js"
   },
   "repository": {
