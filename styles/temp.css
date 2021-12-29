@@ -4,3 +4,6 @@
 section#home {
   background: white;
 }
+.left {
+  display: none;
+}
