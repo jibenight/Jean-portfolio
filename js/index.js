@@ -181,6 +181,7 @@ if (window.matchMedia('(max-width: 720px)').matches) {
 }
 
 // animation form
+
 const succesMessage = document.getElementById('succes-message');
 const formulaire = document.getElementById('formulaire');
 

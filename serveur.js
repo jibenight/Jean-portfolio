@@ -1,6 +1,6 @@
-if (typeof PhusionPassenger !== 'undefined') {
-  PhusionPassenger.configure({ autoInstall: false });
-}
+// if (typeof PhusionPassenger !== 'undefined') {
+//   PhusionPassenger.configure({ autoInstall: false });
+// }
 
 require('dotenv').config();
 const express = require('express');
@@ -44,7 +44,7 @@ app.post('/', function (request, response) {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.GMAIL_USER, // this should be YOUR GMAIL account
+      user: process.env.USER, // this should be YOUR account
       pass: process.env.PASSWORD, // this should be your password
     },
   });
@@ -73,10 +73,10 @@ app.post('/', function (request, response) {
   });
 });
 
-if (typeof PhusionPassenger !== 'undefined') {
-  app.listen('passenger');
-} else {
-  app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-  });
-}
+// if (typeof PhusionPassenger !== 'undefined') {
+//   app.listen('passenger');
+// } else {
+//   app.listen(port, () => {
+//     console.log(`App listening at http://localhost:${port}`);
+//   });
+// }
