@@ -1,4 +1,4 @@
-// import '../node_modules/@fortawesome/fontawesome-free/js/all';
+//import '../node_modules/@fortawesome/fontawesome-free/js/all';
 
 const togglenav = document.querySelector('nav');
 const arrow = document.getElementById('arrow-down');
@@ -181,10 +181,11 @@ if (window.matchMedia('(max-width: 720px)').matches) {
 }
 
 // animation form
+
 const succesMessage = document.getElementById('succes-message');
 const formulaire = document.getElementById('formulaire');
 
-formulaire.addEventListener('submit', event => {
+formulaire.addEventListener('submit', () => {
   formulaire.style.display = 'none';
   succesMessage.style.display = 'grid';
   animateCSS('#send-message', 'bounceInRight');
