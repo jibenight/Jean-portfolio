@@ -13,8 +13,10 @@ const port = 3000;
 // this can be used to serve the index.html file
 if (process.env.NODE_ENV !== 'production') {
   app.use(express.static(path.join(__dirname, '/src')));
+  console.log('Mode Development');
 } else {
   app.use(express.static(path.join(__dirname, '/dist')));
+  console.log('Mode Production');
 }
 
 //render index.html page
