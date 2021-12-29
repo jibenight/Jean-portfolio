@@ -12,6 +12,12 @@ const port = 3000;
 // enable static files pointing to the folder "src"
 // this can be used to serve the index.html file
 app.use(express.static(path.join(__dirname, '/dist')));
+if (process.env.NODE_ENV !== 'production') {
+  app.use(express.static(path.join(__dirname, '/dist')));
+} else {
+  app.use(express.static(path.join(__dirname, '/src')));
+}
+
 //render index.html page
 app.get('/', (request, response) => {
   response.render(index.html);
