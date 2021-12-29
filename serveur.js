@@ -44,7 +44,7 @@ app.post('/', function (request, response) {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.USER, // this should be YOUR account
+      user: process.env.ACCOUNT_USER, // this should be YOUR account
       pass: process.env.PASSWORD, // this should be your password
     },
   });
@@ -76,7 +76,7 @@ app.post('/', function (request, response) {
 // if (typeof PhusionPassenger !== 'undefined') {
 //   app.listen('passenger');
 // } else {
-//   app.listen(port, () => {
-//     console.log(`App listening at http://localhost:${port}`);
-//   });
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
 // }
