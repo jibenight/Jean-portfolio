@@ -6,7 +6,7 @@
   "scripts": {
     "serveur": "node serveur.js",
     "build": "parcel build src/index.html --public-url ./",
-    "deploy": "rm -rf dist/ && npm run build && git add -A && git commit -m ' For deploy on host' && git push"
+    "deploy": "rm -rf dist/ && npm run build"
   },
   "repository": {
     "type": "git",
