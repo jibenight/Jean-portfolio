@@ -1,6 +1,7 @@
 # ignore mac file
 .DS_Store
 node_modules
+dist
 .cache
 .env
 .parcel-cache
