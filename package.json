@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "serveur": "node serveur.js",
-    "build": "parcel build src/index.html --dist-url ./",
+    "build": "parcel build src/index.html --public-url ./",
     "deploy": "rm -rf dist/ && npm run build"
   },
   "repository": {
