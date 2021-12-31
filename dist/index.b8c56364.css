@@ -1,0 +1,2 @@
+.skills{display:grid;gap:10px;grid-template-columns:repeat(4,1fr);height:60vh;margin:auto;width:70vw}.flex-skills{align-items:center;display:flex;flex-direction:column;justify-content:center}.flex-skills p{font-size:1.5rem;margin:15px;text-align:center}.skills-animations{height:100vh;margin:auto;text-align:center;width:80vw}.skills-animations :nth-child(2){margin-top:3%}#skills-techno :nth-child(2){color:#1fa2ff}#skills-techno{display:none}.icons-skills img{width:50%}
+/*# sourceMappingURL=index.b8c56364.css.map */
