@@ -22,6 +22,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "animate.css": "^4.1.1",
+    "devicon": "^2.14.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "nodemailer": "^6.7.2"
