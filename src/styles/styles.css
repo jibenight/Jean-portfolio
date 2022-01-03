@@ -34,6 +34,19 @@ main {
   flex-direction: column;
 }
 
+h1 {
+  font-weight: bolder;
+  font-size: clamp(5rem, 24vw, 10rem);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  /* color: #3b3b3b; */
+}
+
 /* entete génerique */
 .titre {
   display: inline-block;
@@ -74,22 +87,6 @@ main {
   color: #1da5fe;
   font-weight: 500;
 }
-
-h1 {
-  font-weight: bolder;
-  font-size: 10rem;
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(
-    to right,
-    #1fa2ff 0%,
-    #12d8fa 51%,
-    #1fa2ff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .flex-centre {
   display: flex;
   justify-content: center;
@@ -226,7 +223,7 @@ section#home {
 
 .home-right {
   margin-left: 40%;
-  width: 40vw;
+  width: 45vw;
   /* height: 50vh; */
   display: flex;
   justify-content: center;
