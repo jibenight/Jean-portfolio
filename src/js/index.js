@@ -176,10 +176,6 @@ togglenav.addEventListener('click', function (e) {
   }
 });
 
-// Media querie
-if (window.matchMedia('(max-width: 720px)').matches) {
-}
-
 // animation form
 
 const succesMessage = document.getElementById('succes-message');
