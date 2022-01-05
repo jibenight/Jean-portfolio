@@ -17,6 +17,9 @@
   width: 30vw;
 }
 
+#entete .left img {
+  width: 25vw;
+}
 #entete .right {
   width: clamp(60vw, 40vw, 50vw);
 }
