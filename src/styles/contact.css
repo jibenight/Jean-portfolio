@@ -2,7 +2,7 @@
 
 .contact-form {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .contact-titre {
@@ -11,8 +11,13 @@
   margin: auto;
 }
 
+.form-left {
+  width: 350px;
+  margin-right: 5%;
+}
+
 .form-left img {
-  width: 25vw;
+  width: 100%;
 }
 
 .form-right form input,
