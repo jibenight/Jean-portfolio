@@ -1,1 +1,0 @@
-{"mappings":"AAAA,WACA,YACA,CACA,aACA,eACA,CACA,MACA,YACA","sources":["src/styles/temp.css"],"sourcesContent":[".form-left {\n  display: none;\n}\nsection#home {\n  background: white;\n}\n.left {\n  display: none;\n}\n"],"names":[],"version":3,"file":"index.3cbc99ed.css.map"}
