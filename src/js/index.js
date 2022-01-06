@@ -124,11 +124,11 @@ togglenav.addEventListener('click', function (e) {
   const showArrow = () => {
     setTimeout(() => {
       arrow.style.display = 'block';
-      animateCSS('#arrow-animation', 'shakeY');
+      animateCSS('#arrow-animation', 'shakeY', '#arrow-animation', 'shakeY');
     }, timeout);
-    // document.onscroll = () => {
-    //   animateCSS('#arrow-down', 'fadeOut');
-    // };
+    document.onscroll = () => {
+      arrow.style.display = 'none';
+    };
   };
 
   if (cible.firstChild.nodeValue == 'À propos de moi') {
@@ -156,6 +156,7 @@ togglenav.addEventListener('click', function (e) {
   if (cible.firstChild.nodeValue == 'Contact') {
     cancel.classList.add('cancel-contact');
     contact.style.display = 'block';
+    showArrow();
     animateCSS('#contact', 'slideInRight', '#home', 'slideOutLeft').then(
       setTimeout(() => {
         home.style.display = 'none';

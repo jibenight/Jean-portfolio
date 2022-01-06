@@ -1,10 +1,10 @@
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
   /* zone home    */
   #chevron {
     width: 50%;
   }
   .titre {
-    margin-top: 20%;
+    margin-top: 5%;
   }
   .titre h2 {
     font-size: 1.5rem;
@@ -44,7 +44,7 @@
   /* about me */
 
   #entete .right {
-    width: 80vw;
+    width: 50vw;
     margin: 10px;
   }
   .right {
@@ -65,7 +65,7 @@
     margin: 5%;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   /* header */
   header nav p {
     font-size: 1rem;

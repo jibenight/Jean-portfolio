@@ -3,6 +3,7 @@
 .contact-form {
   display: flex;
   justify-content: center;
+  margin-top: 5%;
 }
 
 .contact-titre {
