@@ -1,6 +1,11 @@
 /* font family inter */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('./about.css');
+@import url('./contact.css');
+@import url('./header.css');
+@import url('./portfolio.css');
+@import url('./skills.css');
 @import url('../../node_modules/animate.css/animate.css');
 
 /* gradiant icon hand
@@ -36,7 +41,7 @@ main {
 
 h1 {
   font-weight: bolder;
-  font-size: clamp(3rem, 19vw, 13rem);
+  font-size: clamp(3rem, 12vw, 13rem);
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);

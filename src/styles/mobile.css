@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
   /* zone home    */
   #chevron {
     width: 50%;
@@ -65,34 +65,22 @@
   }
 
   /* about me */
-  #entete {
-    display: block;
-  }
-  #entete .left {
-    display: none;
-  }
-
   #entete .right {
     width: 90vw;
     margin: 10px;
   }
-
   .right {
     border-radius: 15px;
   }
-
   .container::before {
     width: 16px;
   }
-
   .container.right .icon {
     left: 25px;
   }
-
   .certificat {
     grid-template-columns: 1fr;
   }
-
   .certif-item img {
     width: 100%;
   }
@@ -101,27 +89,28 @@
   .card {
     margin: 5%;
   }
-
   /* contact */
   .form-left {
     display: none;
   }
-
   .form-right form {
     width: 100vw;
   }
-
   .direct-contact {
     display: inline-block;
   }
-
   .direct-contact img {
     width: 20vh;
     margin-top: 10%;
   }
+} /*fin */
 
+@media only screen and (max-width: 400px) {
+  /* about */
+  #entete {
+    display: block;
+  }
   /* Skills */
-
   .skills {
     margin-top: 20%;
     grid-template-columns: repeat(2, 1fr);
@@ -141,4 +130,4 @@
   .fa-7x {
     font-size: 5em;
   }
-} /*fin */
+}
