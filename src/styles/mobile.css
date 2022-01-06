@@ -1,4 +1,4 @@
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1300px) {
   /* zone home    */
   #chevron {
     width: 50%;
@@ -21,7 +21,7 @@
 
   .home-right {
     margin-left: 0;
-    width: 40vw;
+    width: 38vw;
   }
 
   #entete p {

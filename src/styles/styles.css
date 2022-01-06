@@ -214,7 +214,7 @@ section#home {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #1da5fe url(../images/background-jean.jpg) no-repeat center;
+  background: #f8f8f8 url(../images/background-jean-Q100.jpg) no-repeat center;
   background-size: cover;
   display: flex;
   align-items: center;
