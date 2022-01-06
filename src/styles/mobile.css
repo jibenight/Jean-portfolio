@@ -16,11 +16,15 @@
     font-size: 1.5rem;
   }
   section#home {
-    background: white;
+    background: #f8f8f8 url(../images/jean-background-portfolio-mobile.jpg)
+      no-repeat center;
+    background-size: cover;
+    align-items: flex-end;
   }
 
   .home-right {
     margin-left: 0;
+    margin-bottom: 80px;
     width: 38vw;
   }
 

@@ -36,7 +36,7 @@ main {
 
 h1 {
   font-weight: bolder;
-  font-size: clamp(5rem, 24vw, 10rem);
+  font-size: clamp(3rem, 19vw, 13rem);
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
