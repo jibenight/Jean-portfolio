@@ -24,6 +24,10 @@ if (process.env.NODE_ENV !== 'production') {
 app.get('/', (request, response) => {
   response.render(index.html);
 });
+//error 404
+app.use(function (request, response) {
+  response.status(404).send('Sorry cant find that!');
+});
 
 // body parser middleware
 app.use(express.json());
