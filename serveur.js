@@ -9,24 +9,25 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const app = express();
 const port = 3000;
+let folder;
 
 // enable static files pointing to the folder "src"
 // this can be used to serve the index.html file
 if (process.env.NODE_ENV !== 'production') {
-  app.use(express.static(path.join(__dirname, '/src')));
+  folder = '/src';
   console.log('Mode Development');
 } else {
-  app.use(express.static(path.join(__dirname, '/dist')));
+  folder = '/dist';
   console.log('Mode Production');
 }
-
+app.use(express.static(path.join(__dirname, folder)));
 //render index.html page
 app.get('/', (request, response) => {
   response.render(index.html);
 });
 //error 404
 app.use(function (request, response) {
-  response.status(404).send('Sorry cant find that!');
+  response.status(404).sendFile(path.join(__dirname, folder, '404.html'));
 });
 
 // body parser middleware
