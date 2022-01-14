@@ -50,6 +50,7 @@ app.use(log);
 
 // HTTP POST
 app.post('/', function (request, response) {
+  response.status(202);
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     host: 'mail.jean-nguyen.dev',
