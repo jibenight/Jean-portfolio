@@ -10,6 +10,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 let folder;
+let error404 = true;
 
 // enable static files pointing to the folder "src"
 // this can be used to serve the index.html file
@@ -23,19 +24,16 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(express.static(path.join(__dirname, folder)));
 //render index.html page
 app.get('/', (request, response) => {
-  response.render(index.html);
-});
-//error 404
-app.use(function (request, response) {
-  response.status(404).sendFile(path.join(__dirname, folder, '404.html'));
+  response.render('index.html');
 });
 
-// body parser middleware
+// body parser middleware need for post and put
 app.use(express.json());
-app.use(express.urlencoded({ extended: false })); // this is to handle URL encoded data
+// this is to handle URL encoded data
+app.use(express.urlencoded({ extended: false }));
 // end parser middleware
 
-// custom middleware to log data access
+// custom middleware to log data access for check in terminal
 const log = function (request, response, next) {
   console.log(
     `${new Date()}: ${request.protocol}://${request.get('host')}${
@@ -49,8 +47,9 @@ app.use(log);
 // end custom middleware
 
 // HTTP POST
+
 app.post('/', function (request, response) {
-  response.status(202);
+  error404 = false;
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     host: 'mail.jean-nguyen.dev',
@@ -85,6 +84,13 @@ app.post('/', function (request, response) {
     }
   });
 });
+
+//error 404
+if (error404) {
+  app.use(function (request, response) {
+    response.status(404).sendFile(path.join(__dirname, folder, '404.html'));
+  });
+}
 
 if (typeof PhusionPassenger !== 'undefined') {
   app.listen('passenger');
