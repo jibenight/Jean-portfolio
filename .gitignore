@@ -5,3 +5,4 @@ dist
 .cache
 .env
 .parcel-cache
+.parcel-cache/data.mdb
