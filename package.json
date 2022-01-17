@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/jibenight/jean-portfolio#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "animate.css": "^4.1.1",
     "devicon": "^2.14.0",
     "dotenv": "^10.0.0",
