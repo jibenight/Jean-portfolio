@@ -1,8 +1,8 @@
 # ignore mac file
 .DS_Store
-node_modules
+node_modules/*
 dist
-.cache
-.env
-.parcel-cache
+.cache/*
+.env/*
+.parcel-cache/*
 .parcel-cache/data.mdb
