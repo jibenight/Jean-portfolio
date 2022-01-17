@@ -108,7 +108,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .skills img {
-    width: 17vw;
+    width: 16vw;
   }
   .skills p {
     font-size: 1.2rem;
@@ -118,7 +118,12 @@
     margin: 2%;
   }
 
-  .fa-7x {
-    font-size: 5em;
+  .flex-skills svg {
+    width: 20vw;
+  }
+
+  /*footer*/
+  footer svg {
+    width: 10vw;
   }
 } /*fin */
