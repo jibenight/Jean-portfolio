@@ -1,4 +1,4 @@
-// spec for O2switch
+// PhusionPassenger need for O2switch
 if (typeof PhusionPassenger !== 'undefined') {
   PhusionPassenger.configure({ autoInstall: false });
 }
@@ -92,6 +92,7 @@ if (error404) {
   });
 }
 
+// PhusionPassenger need for O2switch
 if (typeof PhusionPassenger !== 'undefined') {
   app.listen('passenger');
 } else {
